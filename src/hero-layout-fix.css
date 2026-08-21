@@ -1,0 +1,71 @@
+/* Keep the English hero within its viewport at every desktop width. */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.hero {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.hero-content {
+  width: min(55vw, 630px);
+  margin-top: clamp(90px, 12vh, 155px);
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: max(24px, calc((100% - 1320px) / 2));
+}
+
+.hero-sanctuary {
+  left: auto;
+  right: max(4vw, calc((100% - 1320px) / 2 + 24px));
+}
+
+@media (max-width: 1080px) {
+  .hero-content {
+    width: min(56vw, 570px);
+  }
+
+  .hero-sanctuary {
+    width: min(45vw, 520px);
+    right: 0;
+    left: auto;
+    opacity: .8;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero-content {
+    width: min(76vw, 590px);
+    margin-top: 100px;
+    margin-left: 24px;
+  }
+
+  .hero-sanctuary {
+    width: 440px;
+    right: -120px;
+    left: auto;
+    bottom: -180px;
+    opacity: .58;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    width: calc(100% - 48px);
+    margin-top: 110px;
+    margin-left: 24px;
+  }
+
+  .hero-sanctuary {
+    right: -145px;
+    left: auto;
+    transform: scale(.66);
+    transform-origin: right bottom;
+    opacity: .48;
+  }
+}

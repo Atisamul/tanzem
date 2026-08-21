@@ -8,6 +8,7 @@ import {
   Quote, RotateCcw, Search, Sparkles, Sun, X,
 } from 'lucide-react'
 import './styles.css'
+import './hero-layout-fix.css'
 
 const prayerByCity = {
   Lahore: { label: 'Lahore, Pakistan', prayers: [['Fajr', '04:28'], ['Sunrise', '05:48'], ['Dhuhr', '12:09'], ['Asr', '16:38'], ['Maghrib', '18:30'], ['Isha', '19:50']], qibla: 262 },
